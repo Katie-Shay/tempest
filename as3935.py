@@ -17,6 +17,8 @@ with open(data_file, "a") as file:
                "# * Strike energy (if applicable)\n" \
                "# * Distance to storm front in km (if applicable)\n".format(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")))
 
+sensor.indoor= False
+
 while True:
 
     timestamp= datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
