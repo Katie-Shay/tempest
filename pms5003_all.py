@@ -9,7 +9,7 @@ import time
 # use "raspi-config" to enable serial, or add
 # "dtoverlay=uart0" to /boot/config.txt
 pms5003 = PMS5003(device="/dev/ttyAMA0", baudrate=9600, pin_enable="GPIO22", pin_reset="GPIO27")
-data_file= "/tmp/pms5003.txt"
+data_file= "/home/cass/tempest/data/pms5003.txt"
 
 with open(data_file, "a") as file:
     file.write("# PMS5003 data\n" \
