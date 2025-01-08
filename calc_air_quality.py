@@ -1,10 +1,68 @@
-import pandas as pd
+import pandas as pd, time
 from datetime import datetime, timedelta
 
-data = pd.read_csv('/tmp/pms5003.txt', comment="#", sep=",", header=None,
+data = pd.read_csv('/home/cass/tempest/data/pms5003.txt', comment="#", sep=",", header=None,
                    names=['timestamp',
                           'pm1','pm25','pm10','pm1_atmo','pm25_atmo','pm10_atmo',
                           'part03','part05','part1','part25','part5','part10'])
+
+data_file= "/home/cass/tempest/data/air_quality.txt"
+
+with open(data_file, "a") as file:
+    file.write("# Air Quality data.\n" \
+               "# Started monitoring at {}\n" \
+               "# Per line, the data items are:\n" \
+               "# * timestamp\n" \
+               "# * PM2.5 air quality index (data window 24hrs)\n" \
+               "# * PM10 air quality index (data window 24hrs)\n" \
+               "# * 1hr avg PM 1.0 in μg/m³\n" \
+               "# * 1hr avg PM 2.5 in μg/m³\n" \
+               "# * 1hr avg PM 10 in μg/m³\n" \
+               "# * 1hr avg PM 1.0 in μg/m³ atmospheric environment\n" \
+               "# * 1hr avg PM 2.5 in μg/m³ atmospheric environment\n" \
+               "# * 1hr avg PM 10 in μg/m³ atmospheric environment\n" \
+               "# * 1hr avg number of particles >0.3 μm / 0.1 dm³ of air\n" \
+               "# * 1hr avg number of particles >0.5 μm / 0.1 dm³ of air\n" \
+               "# * 1hr avg number of particles >1.0 μm / 0.1 dm³ of air\n" \
+               "# * 1hr avg number of particles >2.5 μm / 0.1 dm³ of air\n" \
+               "# * 1hr avg number of particles >5 μm / 0.1 dm³ of air\n" \
+               "# * 1hr avg number of particles >10 μm / 0.1 dm³ of air\n" \
+               "# * 8hr avg PM 1.0 in μg/m³\n" \
+               "# * 8hr avg PM 2.5 in μg/m³\n" \
+               "# * 8hr avg PM 10 in μg/m³\n" \
+               "# * 8hr avg PM 1.0 in μg/m³ atmospheric environment\n" \
+               "# * 8hr avg PM 2.5 in μg/m³ atmospheric environment\n" \
+               "# * 8hr avg PM 10 in μg/m³ atmospheric environment\n" \
+               "# * 8hr avg number of particles >0.3 μm / 0.1 dm³ of air\n" \
+               "# * 8hr avg number of particles >0.5 μm / 0.1 dm³ of air\n" \
+               "# * 8hr avg number of particles >1.0 μm / 0.1 dm³ of air\n" \
+               "# * 8hr avg number of particles >2.5 μm / 0.1 dm³ of air\n" \
+               "# * 8hr avg number of particles >5 μm / 0.1 dm³ of air\n" \
+               "# * 8hr avg number of particles >10 μm / 0.1 dm³ of air\n" \
+               "# * 24hr PM 1.0 in μg/m³\n" \
+               "# * 24hr PM 2.5 in μg/m³\n" \
+               "# * 24hr PM 10 in μg/m³\n" \
+               "# * 24hr PM 1.0 in μg/m³ atmospheric environment\n" \
+               "# * 24hr PM 2.5 in μg/m³ atmospheric environment\n" \
+               "# * 24hr PM 10 in μg/m³ atmospheric environment\n" \
+               "# * 24hr number of particles >0.3 μm / 0.1 dm³ of air\n" \
+               "# * 24hr number of particles >0.5 μm / 0.1 dm³ of air\n" \
+               "# * 24hr number of particles >1.0 μm / 0.1 dm³ of air\n" \
+               "# * 24hr number of particles >2.5 μm / 0.1 dm³ of air\n" \
+               "# * 24hr number of particles >5 μm / 0.1 dm³ of air\n" \
+               "# * 24hr number of particles >10 μm / 0.1 dm³ of air\n" \
+               "# * annual avg PM 1.0 in μg/m³\n" \
+               "# * annual avg PM 2.5 in μg/m³\n" \
+               "# * annual avg PM 10 in μg/m³\n" \
+               "# * annual avg PM 1.0 in μg/m³ atmospheric environment\n" \
+               "# * annual avg PM 2.5 in μg/m³ atmospheric environment\n" \
+               "# * annual avg PM 10 in μg/m³ atmospheric environment\n" \
+               "# * annual avg number of particles >0.3 μm / 0.1 dm³ of air\n" \
+               "# * annual avg number avg of particles >0.5 μm / 0.1 dm³ of air\n" \
+               "# * annual avg number avg of particles >1.0 μm / 0.1 dm³ of air\n" \
+               "# * annual avg number avg of particles >2.5 μm / 0.1 dm³ of air\n" \
+               "# * annual avg number avg of particles >5 μm / 0.1 dm³ of air\n" \
+               "# * annual avg number avg of particles >10 μm / 0.1 dm³ of air\n".format(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")))
 
 def calculate_timestamps(interval,unit):
     now= datetime.utcnow()
@@ -29,15 +87,19 @@ def get_data_subset(interval=None, unit=None, timestamp_start=None, timestamp_en
 
 def get_1_hour_avgs():
     data=get_data_subset(1,"hours")
-    return data.mean()
+    return data.mean(numeric_only=True)
+
+def get_8_hour_avgs():
+    data=get_data_subset(8,"hours")
+    return data.mean(numeric_only=True)
 
 def get_24_hour_avgs():
     data=get_data_subset(24,"hours")
-    return data.mean()
+    return data.mean(numeric_only=True)
 
 def get_annual_avgs():
     data=get_data_subset(52,"weeks")
-    return data.mean()
+    return data.mean(numeric_only=True)
 
 def calculate_pm25_aqi():
 
@@ -153,23 +215,39 @@ def calculate_pm10_aqi():
 
     return category, aqi
 
+def format_data(data):
+
+    list= []
+
+    list.append(data['pm1'])
+    list.append(data['pm25'])
+    list.append(data['pm10'])
+    list.append(data['pm1_atmo'])
+    list.append(data['pm25_atmo'])
+    list.append(data['pm10_atmo'])
+    list.append(data['part03'])
+    list.append(data['part05'])
+    list.append(data['part1'])
+    list.append(data['part25'])
+    list.append(data['part5'])
+    list.append(data['part10'])
+
+    return list
+
 def main():
 
-    print("Air Quality Index (PM2.5): {}".format(calculate_pm25_aqi()))
-    print("Air Quality Index (PM10): {}".format(calculate_pm10_aqi()))
+    while True:
 
-    data= get_24_hour_avgs()
-    print("24hr avg PM1: {}".format(data['pm1']))
-    print("24hr avg PM2.5: {}".format(data['pm25']))
-    print("24hr avg PM10: {}".format(data['pm10']))
-    print("24hr avg PM1_atmo: {}".format(data['pm1_atmo']))
-    print("24hr avg PM25_atmo: {}".format(data['pm25_atmo']))
-    print("24hr avg PM10_atmo: {}".format(data['pm10_atmo']))
-    print("24hr avg PM03: {}".format(data['part03']))
-    print("24hr avg PM05: {}".format(data['part05']))
-    print("24hr avg PM1: {}".format(data['part1']))
-    print("24hr avg PM2.5: {}".format(data['part25']))
-    print("24hr avg PM5: {}".format(data['part5']))
-    print("24hr avg PM10: {}".format(data['part10']))
+        timestamp= datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+        pm25_aqi= calculate_pm25_aqi()
+        pm10_aqi= calculate_pm10_aqi()
+        running_avgs= format_data(get_1_hour_avgs()) + format_data(get_8_hour_avgs()) + format_data(get_24_hour_avgs()) + format_data(get_annual_avgs())
+
+        air_quality_data= "{},{},{},{}\n".format(timestamp,pm25_aqi,pm10_aqi,",".join(str(avg) for avg in running_avgs))
+
+        with open(data_file, "a") as file:
+            file.write(air_quality_data)
+
+        time.sleep(1800)
 
 main()
