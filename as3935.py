@@ -6,22 +6,22 @@ import biffobear_as3935
 interrupt_pin = board.D7
 i2c = board.I2C()
 sensor = biffobear_as3935.AS3935_I2C(i2c, interrupt_pin=interrupt_pin)
-data_file= "/tmp/as3935.txt"
+data_file= "/home/cass/tempest/data/as3935.txt"
 
 with open(data_file, "a") as file:
     file.write("# AS3935 data\n" \
-               "# Started monitoring at {}" \
+               "# Started monitoring at {}\n" \
                "# Per line, the data items are:\n" \
                "# * Timestamp\n" \
                "# * Event description\n" \
                "# * Strike energy (if applicable)\n" \
                "# * Distance to storm front in km (if applicable)\n".format(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")))
 
-sensor.indoor= False
+sensor.indoor= True
 
 while True:
 
-    timestamp= datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
+    timestamp= datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     sensor_reading=""
 
     # detect events
