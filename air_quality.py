@@ -12,7 +12,7 @@ with open(data_file, "a") as file:
     file.write("# Air Quality data.\n" \
                "# Started monitoring at {}\n" \
                "# Per line, the data items are:\n" \
-               "# * timestamp\n" \
+               "# * Timestamp\n" \
                "# * PM2.5 air quality index (data window 24hrs)\n" \
                "# * PM10 air quality index (data window 24hrs)\n" \
                "# * 1hr avg PM 1.0 in μg/m³\n" \
@@ -51,18 +51,18 @@ with open(data_file, "a") as file:
                "# * 24hr number of particles >2.5 μm / 0.1 dm³ of air\n" \
                "# * 24hr number of particles >5 μm / 0.1 dm³ of air\n" \
                "# * 24hr number of particles >10 μm / 0.1 dm³ of air\n" \
-               "# * annual avg PM 1.0 in μg/m³\n" \
-               "# * annual avg PM 2.5 in μg/m³\n" \
-               "# * annual avg PM 10 in μg/m³\n" \
-               "# * annual avg PM 1.0 in μg/m³ atmospheric environment\n" \
-               "# * annual avg PM 2.5 in μg/m³ atmospheric environment\n" \
-               "# * annual avg PM 10 in μg/m³ atmospheric environment\n" \
-               "# * annual avg number of particles >0.3 μm / 0.1 dm³ of air\n" \
-               "# * annual avg number avg of particles >0.5 μm / 0.1 dm³ of air\n" \
-               "# * annual avg number avg of particles >1.0 μm / 0.1 dm³ of air\n" \
-               "# * annual avg number avg of particles >2.5 μm / 0.1 dm³ of air\n" \
-               "# * annual avg number avg of particles >5 μm / 0.1 dm³ of air\n" \
-               "# * annual avg number avg of particles >10 μm / 0.1 dm³ of air\n".format(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")))
+               "# * Annual avg PM 1.0 in μg/m³\n" \
+               "# * Annual avg PM 2.5 in μg/m³\n" \
+               "# * Annual avg PM 10 in μg/m³\n" \
+               "# * Annual avg PM 1.0 in μg/m³ atmospheric environment\n" \
+               "# * Annual avg PM 2.5 in μg/m³ atmospheric environment\n" \
+               "# * Annual avg PM 10 in μg/m³ atmospheric environment\n" \
+               "# * Annual avg number of particles >0.3 μm / 0.1 dm³ of air\n" \
+               "# * Annual avg number avg of particles >0.5 μm / 0.1 dm³ of air\n" \
+               "# * Annual avg number avg of particles >1.0 μm / 0.1 dm³ of air\n" \
+               "# * Annual avg number avg of particles >2.5 μm / 0.1 dm³ of air\n" \
+               "# * Annual avg number avg of particles >5 μm / 0.1 dm³ of air\n" \
+               "# * Annual avg number avg of particles >10 μm / 0.1 dm³ of air\n".format(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")))
 
 def calculate_timestamps(interval,unit):
     now= datetime.utcnow()
