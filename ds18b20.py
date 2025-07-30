@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 from w1thermsensor import W1ThermSensor, Sensor, Unit
 from datetime import datetime
 import time
@@ -22,7 +22,6 @@ with open(data_file, "a") as file:
                "# * Temperature in Celsius\n" \
                "# * Temperature in Fahrenheit\n" \
                "# * Temperature in Kelvin\n".format(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")))
-
 
 while True:
 
