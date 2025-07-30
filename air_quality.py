@@ -8,7 +8,7 @@ push_gateway_url= "localhost:9091"
 job_name= "AQI"
 instance_name= "Tempest"
 registry= CollectorRegistry()
-pgw_aqi= Gauge('AQI', 'Based on data reported by AS3935', ['label_name'], registry=registry)
+pgw_aqi= Gauge('AQI', 'Based on data reported by PMS5003', ['label_name'], registry=registry)
 
 # Data Log File
 data_file= "/home/cass/tempest/data/air_quality.txt"
