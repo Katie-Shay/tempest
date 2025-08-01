@@ -48,7 +48,7 @@ while True:
             sensor_reading= "{},{},{},{}\n".format(timestamp,event,sensor.energy,sensor.distance)
             pgw_as3935.labels('Lightning').set(1)
             pgw_as3935.labels("Strike energy").set(sensor.energy)
-            pgw_as3935.labels("Distance to Storm front (km)").set(sensor.distance)
+            pgw_as3935.labels("Distance to storm front (km)").set(sensor.distance)
 
         elif event_type == sensor.DISTURBER:
             event= "Disturber"
