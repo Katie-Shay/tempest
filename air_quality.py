@@ -25,48 +25,48 @@ with open(data_file, "a") as file:
                "# * 1hr avg PM 1.0 in μg/m³ atmospheric environment\n" \
                "# * 1hr avg PM 2.5 in μg/m³ atmospheric environment\n" \
                "# * 1hr avg PM 10 in μg/m³ atmospheric environment\n" \
-               "# * 1hr avg number of particles >0.3 μm / 0.1 dm³ of air\n" \
-               "# * 1hr avg number of particles >0.5 μm / 0.1 dm³ of air\n" \
-               "# * 1hr avg number of particles >1.0 μm / 0.1 dm³ of air\n" \
-               "# * 1hr avg number of particles >2.5 μm / 0.1 dm³ of air\n" \
-               "# * 1hr avg number of particles >5 μm / 0.1 dm³ of air\n" \
-               "# * 1hr avg number of particles >10 μm / 0.1 dm³ of air\n" \
+               "# * 1hr avg number of particles >0.3 μm / 0.1 L of air\n" \
+               "# * 1hr avg number of particles >0.5 μm / 0.1 L of air\n" \
+               "# * 1hr avg number of particles >1.0 μm / 0.1 L of air\n" \
+               "# * 1hr avg number of particles >2.5 μm / 0.1 L of air\n" \
+               "# * 1hr avg number of particles >5 μm / 0.1 L of air\n" \
+               "# * 1hr avg number of particles >10 μm / 0.1 L of air\n" \
                "# * 8hr avg PM 1.0 in μg/m³\n" \
                "# * 8hr avg PM 2.5 in μg/m³\n" \
                "# * 8hr avg PM 10 in μg/m³\n" \
                "# * 8hr avg PM 1.0 in μg/m³ atmospheric environment\n" \
                "# * 8hr avg PM 2.5 in μg/m³ atmospheric environment\n" \
                "# * 8hr avg PM 10 in μg/m³ atmospheric environment\n" \
-               "# * 8hr avg number of particles >0.3 μm / 0.1 dm³ of air\n" \
-               "# * 8hr avg number of particles >0.5 μm / 0.1 dm³ of air\n" \
-               "# * 8hr avg number of particles >1.0 μm / 0.1 dm³ of air\n" \
-               "# * 8hr avg number of particles >2.5 μm / 0.1 dm³ of air\n" \
-               "# * 8hr avg number of particles >5 μm / 0.1 dm³ of air\n" \
-               "# * 8hr avg number of particles >10 μm / 0.1 dm³ of air\n" \
+               "# * 8hr avg number of particles >0.3 μm / 0.1 L of air\n" \
+               "# * 8hr avg number of particles >0.5 μm / 0.1 L of air\n" \
+               "# * 8hr avg number of particles >1.0 μm / 0.1 L of air\n" \
+               "# * 8hr avg number of particles >2.5 μm / 0.1 L of air\n" \
+               "# * 8hr avg number of particles >5 μm / 0.1 L of air\n" \
+               "# * 8hr avg number of particles >10 μm / 0.1 L of air\n" \
                "# * 24hr PM 1.0 in μg/m³\n" \
                "# * 24hr PM 2.5 in μg/m³\n" \
                "# * 24hr PM 10 in μg/m³\n" \
                "# * 24hr PM 1.0 in μg/m³ atmospheric environment\n" \
                "# * 24hr PM 2.5 in μg/m³ atmospheric environment\n" \
                "# * 24hr PM 10 in μg/m³ atmospheric environment\n" \
-               "# * 24hr number of particles >0.3 μm / 0.1 dm³ of air\n" \
-               "# * 24hr number of particles >0.5 μm / 0.1 dm³ of air\n" \
-               "# * 24hr number of particles >1.0 μm / 0.1 dm³ of air\n" \
-               "# * 24hr number of particles >2.5 μm / 0.1 dm³ of air\n" \
-               "# * 24hr number of particles >5 μm / 0.1 dm³ of air\n" \
-               "# * 24hr number of particles >10 μm / 0.1 dm³ of air\n" \
+               "# * 24hr number of particles >0.3 μm / 0.1 L of air\n" \
+               "# * 24hr number of particles >0.5 μm / 0.1 L of air\n" \
+               "# * 24hr number of particles >1.0 μm / 0.1 L of air\n" \
+               "# * 24hr number of particles >2.5 μm / 0.1 L of air\n" \
+               "# * 24hr number of particles >5 μm / 0.1 L of air\n" \
+               "# * 24hr number of particles >10 μm / 0.1 L of air\n" \
                "# * Annual avg PM 1.0 in μg/m³\n" \
                "# * Annual avg PM 2.5 in μg/m³\n" \
                "# * Annual avg PM 10 in μg/m³\n" \
                "# * Annual avg PM 1.0 in μg/m³ atmospheric environment\n" \
                "# * Annual avg PM 2.5 in μg/m³ atmospheric environment\n" \
                "# * Annual avg PM 10 in μg/m³ atmospheric environment\n" \
-               "# * Annual avg number of particles >0.3 μm / 0.1 dm³ of air\n" \
-               "# * Annual avg number avg of particles >0.5 μm / 0.1 dm³ of air\n" \
-               "# * Annual avg number avg of particles >1.0 μm / 0.1 dm³ of air\n" \
-               "# * Annual avg number avg of particles >2.5 μm / 0.1 dm³ of air\n" \
-               "# * Annual avg number avg of particles >5 μm / 0.1 dm³ of air\n" \
-               "# * Annual avg number avg of particles >10 μm / 0.1 dm³ of air\n".format(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")))
+               "# * Annual avg number of particles >0.3 μm / 0.1 L of air\n" \
+               "# * Annual avg number avg of particles >0.5 μm / 0.1 L of air\n" \
+               "# * Annual avg number avg of particles >1.0 μm / 0.1 L of air\n" \
+               "# * Annual avg number avg of particles >2.5 μm / 0.1 L of air\n" \
+               "# * Annual avg number avg of particles >5 μm / 0.1 L of air\n" \
+               "# * Annual avg number avg of particles >10 μm / 0.1 L of air\n".format(datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")))
 
 data = pd.read_csv('/home/cass/tempest/data/pms5003.txt', comment="#", sep=",", header=None,
                    names=['timestamp',
@@ -252,48 +252,48 @@ def format_avgs_for_pgw(running_avgs):
                "1hr avg PM 1.0 in μg/m³ atmospheric environment",
                "1hr avg PM 2.5 in μg/m³ atmospheric environment",
                "1hr avg PM 10 in μg/m³ atmospheric environment",
-               "1hr avg number of particles >0.3 μm / 0.1 dm³ of air",
-               "1hr avg number of particles >0.5 μm / 0.1 dm³ of air",
-               "1hr avg number of particles >1.0 μm / 0.1 dm³ of air",
-               "1hr avg number of particles >2.5 μm / 0.1 dm³ of air",
-               "1hr avg number of particles >5 μm / 0.1 dm³ of air",
-               "1hr avg number of particles >10 μm / 0.1 dm³ of air",
+               "1hr avg number of particles >0.3 μm / 0.1 L of air",
+               "1hr avg number of particles >0.5 μm / 0.1 L of air",
+               "1hr avg number of particles >1.0 μm / 0.1 L of air",
+               "1hr avg number of particles >2.5 μm / 0.1 L of air",
+               "1hr avg number of particles >5 μm / 0.1 L of air",
+               "1hr avg number of particles >10 μm / 0.1 L of air",
                "8hr avg PM 1.0 in μg/m³",
                "8hr avg PM 2.5 in μg/m³",
                "8hr avg PM 10 in μg/m³",
                "8hr avg PM 1.0 in μg/m³ atmospheric environment",
                "8hr avg PM 2.5 in μg/m³ atmospheric environment",
                "8hr avg PM 10 in μg/m³ atmospheric environment",
-               "8hr avg number of particles >0.3 μm / 0.1 dm³ of air",
-               "8hr avg number of particles >0.5 μm / 0.1 dm³ of air",
-               "8hr avg number of particles >1.0 μm / 0.1 dm³ of air",
-               "8hr avg number of particles >2.5 μm / 0.1 dm³ of air",
-               "8hr avg number of particles >5 μm / 0.1 dm³ of air",
-               "8hr avg number of particles >10 μm / 0.1 dm³ of air",
+               "8hr avg number of particles >0.3 μm / 0.1 L of air",
+               "8hr avg number of particles >0.5 μm / 0.1 L of air",
+               "8hr avg number of particles >1.0 μm / 0.1 L of air",
+               "8hr avg number of particles >2.5 μm / 0.1 L of air",
+               "8hr avg number of particles >5 μm / 0.1 L of air",
+               "8hr avg number of particles >10 μm / 0.1 L of air",
                "24hr PM 1.0 in μg/m³",
                "24hr PM 2.5 in μg/m³",
                "24hr PM 10 in μg/m³",
                "24hr PM 1.0 in μg/m³ atmospheric environment",
                "24hr PM 2.5 in μg/m³ atmospheric environment",
                "24hr PM 10 in μg/m³ atmospheric environment",
-               "24hr number of particles >0.3 μm / 0.1 dm³ of air",
-               "24hr number of particles >0.5 μm / 0.1 dm³ of air",
-               "24hr number of particles >1.0 μm / 0.1 dm³ of air",
-               "24hr number of particles >2.5 μm / 0.1 dm³ of air",
-               "24hr number of particles >5 μm / 0.1 dm³ of air",
-               "24hr number of particles >10 μm / 0.1 dm³ of air",
+               "24hr number of particles >0.3 μm / 0.1 L of air",
+               "24hr number of particles >0.5 μm / 0.1 L of air",
+               "24hr number of particles >1.0 μm / 0.1 L of air",
+               "24hr number of particles >2.5 μm / 0.1 L of air",
+               "24hr number of particles >5 μm / 0.1 L of air",
+               "24hr number of particles >10 μm / 0.1 L of air",
                "Annual avg PM 1.0 in μg/m³",
                "Annual avg PM 2.5 in μg/m³",
                "Annual avg PM 10 in μg/m³",
                "Annual avg PM 1.0 in μg/m³ atmospheric environment",
                "Annual avg PM 2.5 in μg/m³ atmospheric environment",
                "Annual avg PM 10 in μg/m³ atmospheric environment",
-               "Annual avg number of particles >0.3 μm / 0.1 dm³ of air",
-               "Annual avg number avg of particles >0.5 μm / 0.1 dm³ of air",
-               "Annual avg number avg of particles >1.0 μm / 0.1 dm³ of air",
-               "Annual avg number avg of particles >2.5 μm / 0.1 dm³ of air",
-               "Annual avg number avg of particles >5 μm / 0.1 dm³ of air",
-               "Annual avg number avg of particles >10 μm / 0.1 dm³ of air"]
+               "Annual avg number of particles >0.3 μm / 0.1 L of air",
+               "Annual avg number avg of particles >0.5 μm / 0.1 L of air",
+               "Annual avg number avg of particles >1.0 μm / 0.1 L of air",
+               "Annual avg number avg of particles >2.5 μm / 0.1 L of air",
+               "Annual avg number avg of particles >5 μm / 0.1 L of air",
+               "Annual avg number avg of particles >10 μm / 0.1 L of air"]
 
     for (label,avg) in zip(labels,running_avgs):
         pgw_aqi.labels(label).set(avg)
